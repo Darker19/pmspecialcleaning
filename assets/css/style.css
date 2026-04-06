@@ -40,16 +40,11 @@ a {
 }
 
 .site-header {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
+    text-align: center;
 }
 
 .site-title {
-    margin: 0;
+    margin: 0 0 24px;
     font-size: clamp(2.1rem, 4.4vw, 3rem);
     font-weight: 300;
     line-height: 1.15;
@@ -122,29 +117,6 @@ a {
     transform-origin: center;
 }
 
-/* Hamburger knop */
-.nav-toggle {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    width: 44px;
-    height: 44px;
-    background: none;
-    border: 0;
-    padding: 0;
-    cursor: pointer;
-}
-
-.nav-toggle span {
-    display: block;
-    width: 26px;
-    height: 3px;
-    margin: 0 auto;
-    border-radius: 2px;
-    background: #666;
-}
-
 .slideshow {
     width: 100%;
     position: relative;
@@ -154,7 +126,6 @@ a {
 }
 
 .slideshow img {
-    height: min(53vw, 430px);
     object-fit: cover;
 }
 
@@ -245,50 +216,26 @@ a {
         align-items: center;
     }
 
-    .nav-toggle {
-        display: flex;
-    }
-
-    .site-nav {
-        display: none;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        margin: 12px 0 0;
-        width: 220px;
-        max-width: none;
-        background: #fff;
-        padding: 15px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        z-index: 20;
-    }
-
-    .site-nav.is-open {
-        display: block;
-    }
-
     .site-nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
+        flex-wrap: wrap;
+        gap: 8px;
     }
 
     .site-nav ul::before,
     .site-nav ul::after {
         display: none;
     }
+}
 
-    .slideshow img {
-        height: 58vw;
-        min-height: 240px;
-    }
+.slideshow img {
+    min-height: 240px;
+}
 
-    .page-content {
-        padding-bottom: 70px;
-    }
+.page-content {
+    padding-bottom: 70px;
+}
 
-    .site-footer {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+.site-footer {
+    flex-direction: column;
+    align-items: flex-start;
 }
