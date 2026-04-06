@@ -2,24 +2,33 @@ name: Deploy website
 
 on:
   push:
-    branches: [ main ]   # alleen bij push naar main
-  workflow_dispatch:      # handmatig starten mogelijk
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   deploy:
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .  # hele repo (index.html + assets)
+          path: .
 
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
