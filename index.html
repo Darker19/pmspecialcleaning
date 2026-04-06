@@ -10,30 +10,36 @@
 
 <body>
 
-    <header>
-        <h1>PM Specialcleaning</h1>
+    <div class="site-shell">
+        <header class="site-header">
+            <h1 class="site-title">PM Specialcleaning</h1>
 
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="./over.html">Over ons</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+            <nav class="site-nav" aria-label="Hoofdmenu">
+                <ul>
+                    <li><a class="is-active" href="index.html">Home</a></li>
+                    <li><a href="over.html">Over ons</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><span class="nav-search" aria-hidden="true"></span></li>
+                </ul>
+            </nav>
+        </header>
 
-    <section class="slideshow">
-        <img src="https://primary.jwwb.nl/unsplash/Iu6parQAO-U.jpg" alt="PM Specialcleaning banner 1">
-        <img src="https://primary.jwwb.nl/unsplash/jjrXvzbqC5E.jpg" alt="PM Specialcleaning banner 2">
-    </section>
+        <section class="slideshow" aria-label="Uitgelichte afbeeldingen">
+            <button class="slide-control slide-prev" type="button" aria-label="Vorige afbeelding"></button>
+            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1400&q=80"
+                alt="Schoonmaakkar in een hotelgang">
+            <button class="slide-control slide-next" type="button" aria-label="Volgende afbeelding"></button>
+        </section>
 
-    <main>
-        <!-- Hier komt je content -->
-    </main>
+        <main class="page-content page-content-home">
+            <section class="content-block content-block-empty" aria-label="Introductie"></section>
+        </main>
 
-    <footer>
-        <p>© 2020 - 2026 PM Specialcleaning</p>
-    </footer>
+        <footer class="site-footer">
+            <p>&copy; 2020 - 2026 PM Specialcleaning</p>
+            <p>Powered by JouwWeb</p>
+        </footer>
+    </div>
 
 </body>
 
