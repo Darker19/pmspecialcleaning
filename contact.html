@@ -45,9 +45,37 @@
 
             <section class="content-block">
                 <h2>Bereikbaar voor vragen en aanvragen</h2>
-                <p>E-mail: <a href="mailto:info@pmspecialcleaning.nl">info@pmspecialcleaning.nl</a></p>
-                <p>Telefoon: <a href="tel:+31612345678">06 12 34 56 78</a></p>
+                <p>E-mail: <a href="mailto:pmspecialcleaning@outlook.com">pmspecialcleaning@outlook.com</a></p>
+                <p>Telefoon: <a href="tel:+31645240824">06 45 24 08 24</a></p>
                 <p>Werkgebied: op afspraak en in overleg</p>
+            </section>
+
+            <section class="content-block">
+                <h2>Contactformulier</h2>
+                <form id="contactForm" class="contact-form" action="contact-verzenden.php" method="POST">
+                    <label for="naam">Naam *</label>
+                    <input id="naam" name="naam" type="text" maxlength="100" autocomplete="name" required>
+
+                    <label for="email">E-mailadres *</label>
+                    <input id="email" name="email" type="email" maxlength="254" autocomplete="email" required>
+
+                    <label for="telefoon">Telefoonnummer</label>
+                    <input id="telefoon" name="telefoon" type="tel" maxlength="30" autocomplete="tel">
+
+                    <label for="bericht">Bericht *</label>
+                    <textarea id="bericht" name="bericht" rows="6" maxlength="5000" required></textarea>
+
+                    <!-- Honeypot: onzichtbaar voor bezoekers, spambots vullen het in -->
+                    <div class="hp-field" aria-hidden="true">
+                        <label for="company_website">Website</label>
+                        <input id="company_website" name="company_website" type="text" tabindex="-1"
+                            autocomplete="off">
+                    </div>
+                    <input type="hidden" name="form_start" id="form_start">
+
+                    <button type="submit">Verstuur bericht</button>
+                    <p class="form-status" role="status" aria-live="polite"></p>
+                </form>
             </section>
         </main>
 
@@ -56,6 +84,7 @@
         </footer>
     </div>
 
+    <script src="assets/js/contact.js" defer></script>
 </body>
 
 </html>

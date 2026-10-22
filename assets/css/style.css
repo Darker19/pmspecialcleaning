@@ -149,6 +149,79 @@ a {
     text-decoration: underline;
 }
 
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 4px;
+    font-size: 0.9rem;
+    color: var(--subheading);
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 16px;
+    padding: 10px 12px;
+    font: inherit;
+    font-size: 0.98rem;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid #c8c8c8;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid var(--link);
+    outline-offset: 1px;
+    border-color: var(--link);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    align-self: flex-start;
+    padding: 10px 22px;
+    font: inherit;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--accent);
+    border: 0;
+    cursor: pointer;
+}
+
+.contact-form button:disabled {
+    opacity: 0.7;
+    cursor: default;
+}
+
+.form-status {
+    margin-top: 12px;
+}
+
+.form-status.is-success {
+    color: var(--subheading);
+}
+
+.form-status.is-error {
+    color: #b42318;
+}
+
+/* honeypot buiten beeld; display:none slaan sommige bots over */
+.hp-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
 .site-footer {
     display: flex;
     align-items: center;
