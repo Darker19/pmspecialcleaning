@@ -7,9 +7,13 @@
 :root {
     --bg: #fbfbfb;
     --surface: #ffffff;
-    --text: #6b6b6b;
-    --heading: #c4462b;
-    --accent: #c0452a;
+    --text: #333333;
+    /* groen van de letters in het logo */
+    --heading: #78a02e;
+    --subheading: #4a641d;
+    /* blauw van de vogel in het logo, iets donkerder voor leesbare witte menutekst */
+    --accent: #047e93;
+    --link: #0097aa;
     --line: #e4e4e4;
     --footer: #707070;
     --shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
@@ -93,7 +97,7 @@ a {
     font-weight: 500;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: #666;
+    color: var(--heading);
     transition: color 0.2s ease, background-color 0.2s ease;
 }
 
@@ -127,7 +131,7 @@ a {
     margin-bottom: 12px;
     font-size: 1.35rem;
     font-weight: 400;
-    color: #4f4f4f;
+    color: var(--subheading);
 }
 
 .content-block p,
@@ -141,7 +145,7 @@ a {
 }
 
 .content-block a {
-    color: var(--accent);
+    color: var(--link);
     text-decoration: underline;
 }
 
