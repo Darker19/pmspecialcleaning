@@ -8,9 +8,10 @@
     --bg: #fbfbfb;
     --surface: #ffffff;
     --text: #333333;
-    /* groen van de letters in het logo */
-    --heading: #78a02e;
-    --subheading: #4a641d;
+    /* groen van de letters in het logo (Illustrator-origineel) */
+    --heading: #6ba834;
+    /* zelfde groen, donkerder voor leesbare tussenkopjes en labels */
+    --subheading: #3f631e;
     /* blauw van de vogel in het logo, iets donkerder voor leesbare witte menutekst */
     --accent: #047e93;
     --link: #0097aa;
