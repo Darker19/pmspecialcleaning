@@ -50,7 +50,7 @@ a {
 
 .site-logo {
     display: inline-block;
-    margin-bottom: 12px;
+    margin-bottom: 24px;
 }
 
 .site-logo img {
@@ -58,12 +58,17 @@ a {
     height: 160px;
 }
 
+/* Alleen voor Google en schermlezers: de naam staat al duidelijk in het logo */
 .site-title {
-    margin: 0 0 24px;
-    font-size: clamp(2.1rem, 4.4vw, 3rem);
-    font-weight: 300;
-    line-height: 1.15;
-    color: var(--heading);
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 .site-nav {
