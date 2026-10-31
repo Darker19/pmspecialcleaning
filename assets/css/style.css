@@ -12,8 +12,8 @@
     --heading: #6ba834;
     /* zelfde groen, donkerder voor leesbare tussenkopjes en labels */
     --subheading: #3f631e;
-    /* blauw van de vogel in het logo, iets donkerder voor leesbare witte menutekst */
-    --accent: #047e93;
+    /* blauwgroen van de vogel in het logo (Illustrator-origineel): hover en actieve menuknop, verzendknop */
+    --accent: #3c9caa;
     --link: #0097aa;
     --line: #e4e4e4;
     --footer: #707070;
