@@ -55,9 +55,7 @@ a {
 
 .site-logo img {
     width: auto;
-    height: 120px;
-    /* laat de witte achtergrond van de jpg wegvallen tegen --bg */
-    mix-blend-mode: multiply;
+    height: 160px;
 }
 
 .site-title {
@@ -239,7 +237,7 @@ a {
     }
 
     .site-logo img {
-        height: 96px;
+        height: 120px;
     }
 
     .site-nav ul {
