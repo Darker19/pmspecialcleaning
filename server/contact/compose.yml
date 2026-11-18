@@ -1,0 +1,22 @@
+# Contactformulier van pmspecialcleaning.nl. Draait op de VPS in /srv/pmcleaning-contact.
+# Caddy stuurt POST /contact-verzenden.php naar deze container (pmcleaning-contact-php-1).
+# Verstuurt via Migadu: formulier@pmspecialcleaning.nl -> info@pmspecialcleaning.nl.
+# Bijwerken: deze map naar /srv/pmcleaning-contact kopiëren en `docker compose up -d` (gaat niet via git pull van de site).
+# .env (niet in git) bevat SMTP_HOST, SMTP_USER, SMTP_PASS, MAIL_FROM en MAIL_TO, zie .env.example.
+name: pmcleaning-contact
+services:
+  php:
+    image: php:8.4-fpm-alpine
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./public:/app/public:ro
+      - ./lib:/app/lib:ro
+      - ./data:/app/data
+      - ./php.ini:/usr/local/etc/php/conf.d/contact.ini:ro
+    networks:
+      - web
+
+networks:
+  web:
+    external: true
